@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TTK_Shop.Data.Infrastructure
+﻿namespace TTK_Shop.Data.Infrastructure
 {
     public class UnitOfWork : IUnitOfWork
     {
@@ -20,6 +14,7 @@ namespace TTK_Shop.Data.Infrastructure
         {
             get { return dbContext ?? (dbContext = dbFactory.Init()); }
         }
+
         public void Commit()
         {
             dbContext.SaveChanges();
