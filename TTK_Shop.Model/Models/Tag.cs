@@ -7,7 +7,8 @@ namespace TTK_Shop.Model.Models
     public class Tag
     {
         [Key]
-        public int ID { get; set; }
+        [MaxLength(50)]
+        public string ID { get; set; }
 
         [Required]
         [MaxLength(50)]

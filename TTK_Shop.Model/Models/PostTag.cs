@@ -12,6 +12,7 @@ namespace TTK_Shop.Model.Models
 
         [Key]
         [Column(Order = 2)]
-        public int TagID { get; set; }
+        [MaxLength(50)]
+        public string TagID { get; set; }
     }
 }
