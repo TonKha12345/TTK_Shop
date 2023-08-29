@@ -35,7 +35,6 @@ namespace TTK_Shop.Model.Models
         public string Phone { get; set; }
 
         [Required]
-        [MaxLength(50)]
         public bool? Status { get; set; }
     }
 }

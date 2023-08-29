@@ -10,7 +10,7 @@ namespace TTK_Shop.Data.Infrastructure
     {
         private bool isDisposed;
 
-        ~Disposable()
+        ~Disposeable()
         {
             Dispose(false);
         }

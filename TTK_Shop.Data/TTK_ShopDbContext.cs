@@ -34,5 +34,9 @@ namespace TTK_Shop.Data
         public DbSet<SystemConfig> SystemConfigs { get; set; }
         public DbSet<Tag> Tags { get; set; }
         public DbSet<VisitorStatistic> VisitorStatistics { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder builder)
+        {
+        }
     }
 }
