@@ -8,6 +8,17 @@
         public override void Up()
         {
             CreateTable(
+                "dbo.Errors",
+                c => new
+                    {
+                        ID = c.Int(nullable: false, identity: true),
+                        Message = c.String(),
+                        StackTrace = c.String(),
+                        CreatedDate = c.DateTime(),
+                    })
+                .PrimaryKey(t => t.ID);
+            
+            CreateTable(
                 "dbo.Footers",
                 c => new
                     {
@@ -195,7 +206,7 @@
                 c => new
                     {
                         PostID = c.Int(nullable: false),
-                        TagID = c.Int(nullable: false),
+                        TagID = c.String(nullable: false, maxLength: 50),
                     })
                 .PrimaryKey(t => new { t.PostID, t.TagID });
             
@@ -252,7 +263,7 @@
                 "dbo.Tags",
                 c => new
                     {
-                        ID = c.Int(nullable: false, identity: true),
+                        ID = c.String(nullable: false, maxLength: 50),
                         Name = c.String(nullable: false, maxLength: 50),
                         Type = c.String(nullable: false, maxLength: 50, unicode: false),
                     })
@@ -299,6 +310,7 @@
             DropTable("dbo.Menus");
             DropTable("dbo.MenuGroups");
             DropTable("dbo.Footers");
+            DropTable("dbo.Errors");
         }
     }
 }

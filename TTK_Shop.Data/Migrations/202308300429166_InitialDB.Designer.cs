@@ -13,7 +13,7 @@ namespace TTK_Shop.Data.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202308290300439_InitialDB"; }
+            get { return "202308300429166_InitialDB"; }
         }
         
         string IMigrationMetadata.Source
