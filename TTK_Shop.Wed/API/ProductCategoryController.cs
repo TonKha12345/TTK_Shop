@@ -10,6 +10,7 @@ using TTK_Shop.Wed.Infrastructure.Core;
 
 namespace TTK_Shop.Wed.API
 {
+    [RoutePrefix("api/productcategory")]
     public class ProductCategoryController : ApiControllerBase
     {
         private IProductCategoryService _productCategoryService;
@@ -17,7 +18,8 @@ namespace TTK_Shop.Wed.API
         {
             this._productCategoryService = productCategoryService;
         }
-        
+
+        [Route("GetAll")]
         public HttpResponseMessage GetAll(HttpRequestMessage request)
         {
             return CreateHttpResponse(request, () =>
