@@ -10,7 +10,7 @@ using TTK_Shop.Model.Models;
 
 namespace TTK_Shop.Data
 {
-    public class TTK_ShopDbContext: DbContext
+    public class TTK_ShopDbContext: IdentityDbContext<ApplicationUser>
     {
         public TTK_ShopDbContext(): base("TTK_ShopDbContext")
         {
@@ -36,8 +36,15 @@ namespace TTK_Shop.Data
         public DbSet<VisitorStatistic> VisitorStatistics { get; set; }
         public DbSet<Error> Errors { get; set; }
 
+        public static TTK_ShopDbContext Create()
+        {
+            return new TTK_ShopDbContext();
+        }
+
         protected override void OnModelCreating(DbModelBuilder builder)
         {
+            builder.Entity<IdentityUserRole>().HasKey(i => new { i.UserId, i.RoleId });
+            builder.Entity<IdentityUserLogin>().HasKey(i => i.UserId);
         }
     }
 }

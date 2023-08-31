@@ -13,9 +13,10 @@ namespace TTK_Shop.Wed.Mapping
     {
         public static void Configure()
         {
-            Mapper.Initialize(cfg => {
-            cfg.CreateMap<Product, ProductViewModel>();
-            cfg.CreateMap<ProductCategory, ProductCategoryViewModel>();
+            Mapper.Initialize(cfg =>
+            {
+                cfg.CreateMap<Product, ProductViewModel>();
+                cfg.CreateMap<ProductCategory, ProductCategoryViewModel>();
 
             });
         }
