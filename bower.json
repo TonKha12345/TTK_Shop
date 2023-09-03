@@ -1,0 +1,17 @@
+{
+  "name": "bower",
+  "homepage": "https://github.com/TonKha12345/TTK_Shop",
+  "authors": [
+    "TonKha12345 <trantonkha1999@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
