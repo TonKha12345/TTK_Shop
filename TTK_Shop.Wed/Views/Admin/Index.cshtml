@@ -15,14 +15,19 @@
 <body>
 
     <div ng-controller="schoolController">
-        <div ng-controller="studentController">
+        @*<div ng-controller="studentController">
             From student: {{message}}
         </div>
 
         <div ng-controller="teacherController">
             From teacher: {{message}}
-        </div>
-        From school: {{message}}
+        </div>*@
+
+        <button ng-click="checkNumber()">Check</button>
+        <input type="number" ng-model="num" /> Value of number: {{num}}
+
+        <br />
+        {{message}}
     </div>
 
     
