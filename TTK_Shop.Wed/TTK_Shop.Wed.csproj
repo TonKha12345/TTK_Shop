@@ -223,6 +223,7 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\plugins\angular\ajax.googleapis.com_ajax_libs_angularjs_1.8.2_angular.js" />
     <Content Include="Scripts\spa\app.js" />
+    <Content Include="Scripts\spa\directive.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -4,6 +4,7 @@ var myApp = angular.module('myModule', []);
 
 myApp.controller('schoolController', schoolController);
 myApp.service('Validator', Validator);
+myApp.directive('teduShopDirective', teduShopDirective)
 //myApp.controller('studentController', studentController);
 //myApp.controller('teacherController', teacherController);
 //DECLARE
@@ -36,5 +37,12 @@ function Validator() {
         else {
             return 'This is odd';
         }
+    }
+}
+
+function teduShopDirective() {
+    return {
+        restrict: 'A',
+        templateUrl: "/Scripts/spa/directive.html"
     }
 }
